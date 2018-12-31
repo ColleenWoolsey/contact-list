@@ -16,17 +16,18 @@ const ContactCollection = {
   // it will be an array of objects.
 
   getAllContacts() {
-    return fetch("http://localhost:8088/database.json")
+    return fetch("http://localhost:8088/database.json.contacts")
     .then(response => response.json())
   },
 
-//   postContact (contactToSave) {
-//     fetch("http://localhost:8088/database.json",
-//     method: "POST",
-//     headers: {
-//         "Content-Type": "application/json"
-//     },
-//     body: JSON.stringify(contactToSave)
-//     )}
+  postContact (contactToSave) {
+    fetch("http://localhost:8088/database.json.contacts",
+    // method: "POST",
+    // headers: {
+    //     "Content-Type": "application/json"
+    // },
+    // body: JSON.stringify(contactToSave)
+    )}
   }
+
   export default ContactCollection
