@@ -7,29 +7,29 @@ const ContactForm = {
     },
 
     addNewContact () {
-        console.log("Button was clicked")
-        let cname = document.querySelector("#name-field").value;
+        console.log("Button was clicked");
+        let cname = document.querySelector(".name-field").value;
         console.log(cname);
                 
-        let cphone = document.querySelector("#phone-field").value;
+        let cphone = document.querySelector(".phone-field").value;
         console.log(cphone);
         
-        let ccity = document.querySelector("#city-field").value;
+        let ccity = document.querySelector(".city-field").value;
         console.log(ccity);
         
-        let ccompany = document.querySelector("#company-field").value;
+        let ccompany = document.querySelector(".company-field").value;
         console.log(ccompany);
             
-        let contactObject =
+        let contactToSave =
         {
-                "name": cname,
-                "phone": cphone,
-                "city": ccity,
-                "company": ccompany,
-            }
+            "name": cname,
+            "phone": cphone,
+            "city": ccity,
+            "company": ccompany,
+        }
         
-        console.log(contactObject)
-        ContactCollection.postContact(contactObject)
+        console.log(contactToSave)
+        ContactCollection.postContacts(contactToSave)
     }
 }
 export default ContactForm

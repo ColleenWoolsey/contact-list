@@ -1,12 +1,11 @@
 import Contact from "./Contact"
 import ContactForm from "./ContactForm"
-import ContactList from "./ContactList"
-import ContactCollection from "./ContactCollection"
+//import ContactList from "./ContactList"
+//import ContactCollection from "./ContactCollection"
 
 Contact.testIt();
 ContactForm.testIt();
-ContactCollection.testIt();
-ContactList.testIt();
+// ContactCollection.testIt();
+// ContactList.testIt();
 
-//Contact.ContactBuilder();
-//ContactCollection.getAllContacts();
+Contact.contactBuilder();

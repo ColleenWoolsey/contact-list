@@ -1,3 +1,4 @@
+import ContactForm from "./ContactForm"
 // Given a single contact object, this component builds out the HTML
 // and returns it
 const Contact = {
@@ -17,10 +18,8 @@ const Contact = {
     // }
       
     contactBuilder () {
-        const contactForm = document.createElement("form");
-      //contactForm.setAttribute("action", "index.html");
-      //contactForm.setAttribute("method", "post");
-  
+        const contactForm = document.createElement("article");
+        
   // Defined 5 primary elements of form
       const nameFieldset = document.createElement("fieldset");
       const phoneFieldset = document.createElement("fieldset");
@@ -36,7 +35,6 @@ const Contact = {
       const nameField = document.createElement("input");
       nameField.setAttribute("type", "text");
       nameField.className = "name-field";
-      nameField.textContent = contactObject.name;
   
       nameFieldset.appendChild(nameLabel);
       nameFieldset.appendChild(nameField);
@@ -50,7 +48,6 @@ const Contact = {
       const phoneField = document.createElement("input");
       phoneField.setAttribute("type", "tel");
       phoneField.className = "phone-field";
-      phoneField.textContent = contactObject.phone;
   
       phoneFieldset.appendChild(phoneLabel);
       phoneFieldset.appendChild(phoneField);
@@ -64,7 +61,6 @@ const Contact = {
       const cityField = document.createElement("input");
       cityField.setAttribute("type", "text");
       cityField.className = "city-field";
-      cityField.textContent = contactObject.city;
   
       cityFieldset.appendChild(cityLabel);
       cityFieldset.appendChild(cityField);
@@ -82,19 +78,16 @@ const Contact = {
       companyFieldset.appendChild(companyLabel);
       companyFieldset.appendChild(companyField);
       contactForm.appendChild(companyFieldset);
-      companyField.textContent = contactObject.company;
-        
-  // Add button and event listener
+
+      // Add button
       addButton.textContent = "Add New Contact";
-      addButton.addEventListener("click", Contact.addNewContact());
+      addButton.setAttribute("type", "submit");
       contactForm.appendChild(addButton);
-  
-      //return contactForm
-      },
-
-    addNewContact () {
-
-    }
+      addButton.addEventListener("click", function() {
+        ContactForm.addNewContact(contactForm);
+        });
+      document.querySelector("#form-container").appendChild(contactForm);
+    },
 }
   
   export default Contact
