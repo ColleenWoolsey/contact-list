@@ -1,6 +1,12 @@
+import Contact from "./Contact"
 import ContactForm from "./ContactForm"
 import ContactList from "./ContactList"
+import ContactCollection from "./ContactCollection"
 
 Contact.testIt();
-Contact.getData();
-ContactForm.ContactBuilder();
+ContactForm.testIt();
+ContactCollection.testIt();
+ContactList.testIt();
+
+//Contact.ContactBuilder();
+//ContactCollection.getAllContacts();

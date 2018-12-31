@@ -1,6 +1,10 @@
 // COMPONENT RESPONSIBLE FOR INTERACTING WITH THE API.
 
 const ContactCollection = {
+
+    testIt () {
+        console.log("hello from ContactCollection.js");
+    },
   // This method returns a fetch, which means it is returning
   // a promise. Which means to access the response from the
   // asynchronous HTTP GET request that is being made by this
@@ -14,7 +18,15 @@ const ContactCollection = {
   getAllContacts() {
     return fetch("http://localhost:8088/database.json")
     .then(response => response.json())
-  }
-}
+  },
 
-export default ContactCollection
+//   postContact (contactToSave) {
+//     fetch("http://localhost:8088/database.json",
+//     method: "POST",
+//     headers: {
+//         "Content-Type": "application/json"
+//     },
+//     body: JSON.stringify(contactToSave)
+//     )}
+  }
+  export default ContactCollection
