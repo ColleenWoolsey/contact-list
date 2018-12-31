@@ -2,7 +2,7 @@
 // and returns it
 const Contact = {
     testIt () {
-        console.log("hello");
+        console.log("hello from Contact.js");
     },
 
     // This method takes one argument, which we expect to be an
@@ -16,7 +16,7 @@ const Contact = {
     //   id: "auto-generated identifier"
     // }
       
-    contactBuilder (contactObject) {
+    contactBuilder () {
         const contactForm = document.createElement("form");
       //contactForm.setAttribute("action", "index.html");
       //contactForm.setAttribute("method", "post");
@@ -86,11 +86,15 @@ const Contact = {
         
   // Add button and event listener
       addButton.textContent = "Add New Contact";
-      addButton.addEventListener("click", addNewContact);
+      addButton.addEventListener("click", Contact.addNewContact());
       contactForm.appendChild(addButton);
   
-      return contactForm
-      }
+      //return contactForm
+      },
+
+    addNewContact () {
+
     }
+}
   
   export default Contact

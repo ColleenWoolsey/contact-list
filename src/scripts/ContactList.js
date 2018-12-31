@@ -10,6 +10,11 @@ import ContactCollection from "./ContactCollection"
 import Contact from "./Contact"
 
 const ContactList = {
+
+    testIt () {
+        console.log("hello from ContactList.js");
+    },
+
     getData() {
     // 1. Get data
     // The getAllContacts method will do a fetch and return
