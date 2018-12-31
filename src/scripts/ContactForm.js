@@ -29,7 +29,7 @@ const ContactForm = {
         }
         
         console.log(contactToSave)
-        ContactCollection.postContacts(contactToSave)
+        ContactCollection.postContact(contactToSave);
     }
 }
 export default ContactForm

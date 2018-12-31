@@ -15,28 +15,5 @@
   ],
   "profile": {
     "name": "typicode"
-  },
-  "contacts": [
-    {
-      "name": "Colleen",
-      "phone": "615-555-5177",
-      "city": "Nashville",
-      "company": "AT&T",
-      "id": "1"
-    },
-    {
-      "name": "Rob",
-      "phone": "615-555-5194",
-      "city": "Boone",
-      "company": "WoolseyCDR",
-      "id": "2"
-    },
-    {
-      "name": "Kathryn",
-      "phone": "615-555-5196",
-      "city": "Knoxville",
-      "company": "Parks and Rec",
-      "id": "3"
-    }
-  ]
+  }
 }
