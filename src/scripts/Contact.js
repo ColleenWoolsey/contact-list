@@ -79,13 +79,15 @@ const Contact = {
       companyFieldset.appendChild(companyField);
       contactForm.appendChild(companyFieldset);
 
-      // Add button
+  // Add button
       addButton.textContent = "Add New Contact";
       addButton.setAttribute("type", "submit");
       contactForm.appendChild(addButton);
       addButton.addEventListener("click", function() {
-        ContactForm.addNewContact(contactForm);
+        ContactForm.addNewContact();
         });
+      console.log("EventListener added")
+      console.log(contactForm)
       document.querySelector("#form-container").appendChild(contactForm);
     },
 }
